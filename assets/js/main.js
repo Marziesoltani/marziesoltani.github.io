@@ -94,6 +94,19 @@ document.querySelectorAll(".skill-group__header").forEach((button) => {
   });
 });
 
+// Build the email address only after a visitor chooses to contact Marzieh.
+// This keeps it out of the static HTML and blocks basic address harvesters.
+const emailCharacterCodes = [115, 111, 108, 116, 97, 110, 105, 107, 64, 117, 111, 103, 117, 101, 108, 112, 104, 46, 99, 97];
+const openEmailClient = (event) => {
+  event.preventDefault();
+  const address = String.fromCharCode(...emailCharacterCodes);
+  window.location.href = `mailto:${address}`;
+};
+
+document.querySelectorAll(".js-email-link").forEach((link) => {
+  link.addEventListener("click", openEmailClient);
+});
+
 const slider = document.querySelector("[data-slider]");
 
 if (slider) {
