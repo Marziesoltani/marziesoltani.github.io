@@ -307,15 +307,9 @@ svg {
   stroke: none;
 }
 
-.social-link--scholar {
-  overflow: hidden;
-  background: #fff;
-}
-
-.social-link--scholar img {
-  width: 1.2rem;
-  height: 1.2rem;
-  object-fit: contain;
+.social-link--scholar svg {
+  width: 1.15rem;
+  height: 1.15rem;
 }
 
 .social-link--orcid {
